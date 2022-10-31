@@ -184,8 +184,10 @@ namespace Multas
 
             // Obtenemos la fila seleccionada
             DataGridViewRow filaSeleccionada = e.Row;
-            CargarInfoFilaSeleccionadaFormulario(filaSeleccionada);
-
+            if (dgvMultas.SelectedRows.Count == 1)
+            {
+                CargarInfoFilaSeleccionadaFormulario(filaSeleccionada);
+            }
         }
 
         #endregion
